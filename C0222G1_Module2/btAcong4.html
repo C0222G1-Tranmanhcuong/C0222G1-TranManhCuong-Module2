@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+        function demSo(array) {
+            for (let i = 0; i < array.length; i++) {
+                let count =1
+                if (array[i]===''){
+                    continue;
+                }else {
+                    for (let j = i+1; j < array.length; j++) {
+                        if (array[i]===array[j]){
+                            count++
+                            array.splice(j,1,'')
+                        }
+                    }
+                }
+                console.log('Số '+array[i]+' có '+count+ ' kí tự ')
+            }
+            console.log(array)
+        }
+        demSo([ 1,2,3,3,2,2,4])
+</script>
+
+</body>
+</html>
