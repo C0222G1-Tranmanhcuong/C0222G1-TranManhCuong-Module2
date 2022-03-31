@@ -1,8 +1,8 @@
-package ss1_Introduction_to_Java.thuc_hanh;
+package _01_introduction_Java.practice;
 
 import java.util.Scanner;
 
-public class ToanTu {
+public class Operator {
     public static void main(String[] args) {
         float width;
         float height;
