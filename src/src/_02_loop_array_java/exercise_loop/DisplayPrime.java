@@ -1,6 +1,4 @@
-package _02_loop_Java.exercise_loop;
-
-import java.util.Scanner;
+package _02_loop_array_java.exercise_loop;
 
 public class DisplayPrime {
     public static void main(String[] args) {
