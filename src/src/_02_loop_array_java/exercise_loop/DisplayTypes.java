@@ -2,7 +2,7 @@ package _02_loop_array_java.exercise_loop;
 
 import java.util.Scanner;
 
-public class Display {
+public class DisplayTypes {
     public static void main(String[] args) {
         int choice = -1;
         Scanner input = new Scanner(System.in);

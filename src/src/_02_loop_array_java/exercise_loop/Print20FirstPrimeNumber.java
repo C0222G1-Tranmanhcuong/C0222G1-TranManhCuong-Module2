@@ -1,6 +1,6 @@
 package _02_loop_array_java.exercise_loop;
 
-public class DisplayPrime {
+public class Print20FirstPrimeNumber {
     public static void main(String[] args) {
         int numbers = 20;
         int count = 0;
