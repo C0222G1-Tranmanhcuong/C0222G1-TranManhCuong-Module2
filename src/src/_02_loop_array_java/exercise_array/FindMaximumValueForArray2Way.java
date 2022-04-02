@@ -2,7 +2,7 @@ package _02_loop_array_java.exercise_array;
 
 import java.util.Scanner;
 
-public class TimGiaTriLonNhatMangHaiChieu {
+public class FindMaximumValueForArray2Way {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         // Tạo mảng hai chiều với ma trận là số hàng m và số cột n.

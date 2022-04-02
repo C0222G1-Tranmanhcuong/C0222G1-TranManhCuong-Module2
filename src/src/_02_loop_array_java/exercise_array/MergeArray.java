@@ -2,7 +2,7 @@ package _02_loop_array_java.exercise_array;
 
 import java.util.Scanner;
 
-public class GopMang {
+public class MergeArray {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         int arr1[] = new int[100];

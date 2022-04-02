@@ -2,7 +2,7 @@ package _02_loop_array_java.exercise_array;
 
 import java.util.Scanner;
 
-public class TimPhanTuNhoNhat {
+public class FindMinimumValueForArray {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.println("Nhap so luong phan tu vao mang: ");
