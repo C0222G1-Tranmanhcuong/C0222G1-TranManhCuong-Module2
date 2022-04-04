@@ -1,58 +1,36 @@
 package _02_loop_array_java.exercise_array;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class DeleteElementInArray {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        int arr[] = new int[100];
+        int arr[] = new int[10];
         System.out.print("Nhap so luong phan tu: ");
-        int n = input.nextInt();    // Nhập size mảng
-
-        //Nhập phần tử vào mảng.
+        int n = input.nextInt();
         for (int i = 0; i < n; i++) {
             System.out.printf(" Nhap Arr[%d]= ", i);
             arr[i] = input.nextInt();
         }
-
-        //Xuất mảng vừa nhập.
         System.out.println();
         for (int i = 0; i < n; i++) {
             System.out.printf("Arr[%d]= %d\n", i, arr[i]);
         }
-
-        //Nhập giá trị cần xoá.
         System.out.print("Nhap gia tri can xoa: ");
         int x = input.nextInt();
-        int index;
-        int count = 0;
-        //Duyệt mảng xem x có trong mảng hay không.
-        for (int i = 0; i < n; i++) {
-            if (arr[i] == x) {
-                count++;
-                index = i;
-                System.out.print("Vi tri phan tu can xoa la: " + index);// nếu có thì xuất ra vị trị x trong mảng.
+        System.out.print(Arrays.toString(deleteArray(arr, x)));
+    }
 
-                //Thực hiện xoá bằng cách dịch chuyển từ vị trí xoá+1 cho đến phần tử cuối sang trái 1 dvi.
-                for (i = index; i < n; i++) {
-                    arr[i] = arr[i + 1];
-
+    public static int[] deleteArray(int[] arr1, int num) {
+        for (int i = 0; i < arr1.length; i++) {
+            if (arr1[i] == num) {
+                for (int j = i + 1; j < arr1.length; j++, i++) {
+                    arr1[i] = arr1[j];
                 }
-                n--;
-                break;
-
             }
         }
-        // Xuất ra mảng mới.
-        System.out.println();
-        for (int i = 0; i < n; i++) {
-            System.out.printf("Arr[%d]= %d\n", i, arr[i]);
-        }
-        if (count == 0) {
-            System.out.print("Khong co");
-        }
-
+        arr1[arr1.length - 1] = 0;
+        return arr1;
     }
 }
-
-

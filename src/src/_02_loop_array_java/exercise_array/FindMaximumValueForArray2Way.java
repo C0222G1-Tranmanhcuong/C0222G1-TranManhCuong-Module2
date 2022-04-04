@@ -5,40 +5,39 @@ import java.util.Scanner;
 public class FindMaximumValueForArray2Way {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        // Tạo mảng hai chiều với ma trận là số hàng m và số cột n.
         int m = 0, n = 0;
         System.out.print("Nhap so hang m: ");
         m = input.nextInt();
         System.out.print("Nhap so cot n: ");
         n = input.nextInt();
+        //int arr[][] = new int[m][n];
+        System.out.print(" Gia tri lon nhat trong mang hai chieu la: " + maxArray(m, n));
+    }
 
-        //Nhập phần tử vào mảng hai chiều vừa tạo.
-        int a[][] = new int[m][n];
+    public static int maxArray(int row, int col) {
+        Scanner input = new Scanner(System.in);
+        int[][] arrNew = new int[row][col];
         System.out.println(" Nhap gia tri cho tung phan tu: ");
-        for (int i = 0; i < m; i++)
-            for (int j = 0; j < n; j++) {
-                System.out.print(" a [" + i + "][" + j + "]=  ");
-                a[i][j] = input.nextInt();
+        for (int i = 0; i < row; i++)
+            for (int j = 0; j < col; j++) {
+                System.out.print(" arrNew [" + i + "][" + j + "]=  ");
+                arrNew[i][j] = input.nextInt();
             }
-
-        // Xuất ra mảng hai chiều vừa tạo
         System.out.println("Mang 2 chieu vua tao la: ");
-        for (int i = 0; i < m; i++) {
-            for (int j = 0; j < n; j++) {
-                System.out.print(a[i][j] + " ");
+        for (int i = 0; i < row; i++) {
+            for (int j = 0; j < col; j++) {
+                System.out.print(arrNew[i][j] + " ");
             }
             System.out.println();
         }
-
-        // Tìm giá trị phần tử lớn nhất.
-        int max = a[0][0];
-        for (int i = 0; i < m; i++) {
-            for (int j = 0; j < n; j++) {
-                if (max < a[i][j]) {
-                    max = a[i][j];
-                    System.out.print("Phan tu lon nhat trong mang hai chieu la: " + max);
+        int max = arrNew[0][0];
+        for (int i = 0; i < row; i++) {
+            for (int j = 0; j < col; j++) {
+                if (max < arrNew[i][j]) {
+                    max = arrNew[i][j];
                 }
             }
         }
+        return max;
     }
 }
