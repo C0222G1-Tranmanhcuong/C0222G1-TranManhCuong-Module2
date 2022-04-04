@@ -26,11 +26,11 @@ public class MergeArray {
         }
         int n3 = n1 + n2;
         int arr3[] = new int[n3];
-        System.out.print(Arrays.toString(mergaArray(arr1, arr2, arr3)));
-        
+        System.out.print(Arrays.toString(mergeArray(arr1, arr2, arr3)));
+
     }
 
-    public static int[] mergaArray(int[] arrNew1, int[] arrNew2, int[] arrNew3) {
+    public static int[] mergeArray(int[] arrNew1, int[] arrNew2, int[] arrNew3) {
         for (int i = 0; i < arrNew1.length; i++) {
             arrNew3[i] = arrNew1[i];
         }
