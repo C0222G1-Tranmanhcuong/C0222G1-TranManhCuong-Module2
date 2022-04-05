@@ -1,10 +1,6 @@
 package _03_class_and_object_in_java.pratice;
 
 
-
-public class ClassRectangle {
-
-
     public class Rectangle{
         double width,height;
         public Rectangle(){
@@ -23,5 +19,5 @@ public class ClassRectangle {
             return "Rectangle{"+ "width=" + width + ", height=" + height + "}";
         }
     }
-}
+
 
