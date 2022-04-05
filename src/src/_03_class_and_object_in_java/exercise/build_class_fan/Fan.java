@@ -1,6 +1,6 @@
 package _03_class_and_object_in_java.exercise.build_class_fan;
 
-public class BuildClassFan {
+public class Fan {
     final int SLOW =1;
     final int MEDIUM =2;
     final int FAST =3;
@@ -9,7 +9,7 @@ public class BuildClassFan {
     private int speed;
     private String color;
 
-    public BuildClassFan(){
+    public Fan(){
 
     }
     public int getSLOW() {

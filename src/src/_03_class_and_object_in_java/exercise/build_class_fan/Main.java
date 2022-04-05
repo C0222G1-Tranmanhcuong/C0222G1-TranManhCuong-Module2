@@ -1,12 +1,10 @@
 package _03_class_and_object_in_java.exercise.build_class_fan;
 
-import _03_class_and_object_in_java.exercise.build_class_fan.BuildClassFan;
-
-public class BuildClassFan1 {
+public class Main {
     public static void main(String[] args) {
-        BuildClassFan buildClassFan1 = new BuildClassFan();
+        Fan buildClassFan1 = new Fan();
         buildClassFan1.Fan(3,10,"yellow",true);
-        BuildClassFan buildClassFan2 = new BuildClassFan();
+        Fan buildClassFan2 = new Fan();
         buildClassFan2.Fan(1,5,"Blue",false);
         System.out.println(buildClassFan1);
         System.out.println(buildClassFan2);
