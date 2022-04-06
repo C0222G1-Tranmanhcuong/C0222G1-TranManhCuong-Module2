@@ -1,6 +1,6 @@
 package _03_class_and_object_in_java.exercise.build_class_fan;
 
-public class Main {
+public class TestFan {
     public static void main(String[] args) {
         Fan buildClassFan1 = new Fan();
         buildClassFan1.Fan(3,10,"yellow",true);

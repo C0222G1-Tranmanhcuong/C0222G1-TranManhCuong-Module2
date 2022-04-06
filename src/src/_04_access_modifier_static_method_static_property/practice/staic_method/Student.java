@@ -1,4 +1,4 @@
-package _04_access_modifier_static_metod_static_property.practice;
+package _04_access_modifier_static_metod_static_property.practice.staic_method;
 
         public class Student{
             private int rollno;
