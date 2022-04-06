@@ -1,4 +1,4 @@
-package _04_access_modifier_static_metod_static_property.practice.staic_property;
+package _04_access_modifier_static_method_static_property.practice.staic_property;
 
 public class TestStaticProperty {
     public static void main(String[] args) {
