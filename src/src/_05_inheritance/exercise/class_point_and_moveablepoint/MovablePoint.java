@@ -73,19 +73,21 @@ public class MovablePoint extends Point {
         this.xSpeed = xSpeed;
         this.ySpeed = ySpeed;
     }
-
-    public String getSpeed() {
-        float[] arr = new float[2];
-        arr[0] = this.xSpeed;
-        arr[1] = this.ySpeed;
-        return Arrays.toString(arr);
+    public float[] getSpeed(){
+        return new float[] {xSpeed,ySpeed};
     }
+//    public String getSpeed() {
+//        float[] arr = new float[2];
+//        arr[0] = this.xSpeed;
+//        arr[1] = this.ySpeed;
+//        return Arrays.toString(arr);
+//    }
 
     @Override
     public String toString() {
         return "MovablePoint{" +
-                "x= " + getX() +
-                ", y= " + getY() + ", " + "speed= " + getSpeed() +
+                "x= " + super.getX() +
+                ", y= " + super.getY() + ", " + "XSpeed= " + getXSpeed()+ "," + " YSpeed= "+ getYSpeed() +
                 '}';
     }
 

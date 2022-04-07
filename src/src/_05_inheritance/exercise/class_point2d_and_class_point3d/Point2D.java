@@ -31,24 +31,30 @@ public class Point2D {
     public void setY(float y) {
         this.y = y;
     }
-
-    public String getXY() {
-        float[] arr = new float[2];
-        arr[0] = this.x;
-        arr[1] = this.y;
-        return Arrays.toString(arr);
-    }
-
-    public void setXY() {
+    public void setXY(float x, float y){
         this.x = x;
         this.y = y;
     }
 
+
+    public float[] getXY(){
+        float[] arr = {x,y};
+        return arr;
+    }
+// Phương thức getXY trả về float, không phải String.
+//    public String getXY() {
+//        float[] arr = new float[2];
+//        arr[0] = this.x;
+//        arr[1] = this.y;
+//        return Arrays.toString(arr);
+//    }
+
+
     @Override
     public String toString() {
         return "Point2D{" +
-                "x=" + x +
-                ", y=" + y +
+                "x=" + getX() +
+                ", y=" + getY() +
                 '}';
     }
 }

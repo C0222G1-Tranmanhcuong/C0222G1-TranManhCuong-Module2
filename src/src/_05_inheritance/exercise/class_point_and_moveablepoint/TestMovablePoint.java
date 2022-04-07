@@ -2,6 +2,7 @@ package _05_inheritance.exercise.class_point_and_moveablepoint;
 
 public class TestMovablePoint {
     public static void main(String[] args) {
+
         MovablePoint movablePoint = new MovablePoint();
         System.out.println(movablePoint);
 
@@ -10,6 +11,7 @@ public class TestMovablePoint {
 
         System.out.println("Diem di chuyen co toa do la: "+ movablePoint.move());
     }
+    }
 
 
-}
+

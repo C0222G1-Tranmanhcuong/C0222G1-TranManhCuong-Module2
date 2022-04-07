@@ -42,17 +42,17 @@ public class Point3D extends Point2D {
         this.z = z;
     }
 
-    public String getXYZ(float x, float y, float z) {
-        float[] arr = new float[3];
-        arr[0] = this.getX();
-        arr[1] = this.getY();
-        arr[2] = this.getZ();
-        return Arrays.toString(arr);
+    public float[] getXYZ() {
+        float[] arr = {getX(), getY(), this.z};
+        return arr;
+
     }
 
-    public void setXYZ() {
-        this.getX();
-        this.getY();
+
+
+    public void setXYZ(float x, float y, float z) {
+        this.setX(x);
+        this.setY(y);
         this.z = z;
     }
 
