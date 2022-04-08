@@ -1,4 +1,4 @@
-package _06_abstract_class_and_interface.exercise.inplement_resizeble;
+package _06_abstract_class_and_interface.exercise.inplement_interface_resizeble;
 
 public class Circle extends Shape {
     private double radius;

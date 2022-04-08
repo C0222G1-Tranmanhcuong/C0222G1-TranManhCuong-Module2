@@ -1,4 +1,4 @@
-package _06_abstract_class_and_interface.exercise.inplement_colorable;
+package _06_abstract_class_and_interface.exercise.inplement_interface_colorable;
 
 public class MainTests {
     public static void main(String[] args) {

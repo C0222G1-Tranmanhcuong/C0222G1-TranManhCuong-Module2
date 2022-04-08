@@ -1,6 +1,4 @@
-package _06_abstract_class_and_interface.exercise.inplement_resizeble;
-
-import _06_abstract_class_and_interface.exercise.inplement_resizeble.Shape;
+package _06_abstract_class_and_interface.exercise.inplement_interface_resizeble;
 
 public class Square extends Shape {
     private double side;
