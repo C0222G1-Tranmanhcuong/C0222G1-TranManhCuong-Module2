@@ -102,8 +102,8 @@ public class TestDemo {
         int age = Integer.parseInt(sc.nextLine());
         System.out.println("Nhập 1:Nam    2:Nữ ");
         boolean gender = false;
-        int choice = Integer.parseInt(sc.nextLine());
-        if (choice == 1) {
+        int choose = Integer.parseInt(sc.nextLine());
+        if (choose == 1) {
             gender = true;
         }
         System.out.println("Nhập điểm: ");
@@ -142,8 +142,8 @@ public class TestDemo {
         int age = Integer.parseInt(sc.nextLine());
         System.out.println("Nhập 1:Nam    2:Nữ ");
         boolean gender = false;
-        int choice = Integer.parseInt(sc.nextLine());
-        if (choice == 1) {
+        int choose = Integer.parseInt(sc.nextLine());
+        if (choose == 1) {
             gender = true;
         }
         System.out.println("Nhập lương: ");
