@@ -11,35 +11,35 @@ public class SumTheElementsInColumn {
         m = input.nextInt();
         System.out.print("Nhap so cot n: ");
         n = input.nextInt();
+        System.out.print(sumCol(m, n));
+    }
 
-        //Nhập phần tử vào mảng hai chiều vừa tạo.
-        int arr[][] = new int[m][n];
+    public static int sumCol(int row, int col) {
+        Scanner input = new Scanner(System.in);
+        int arr[][] = new int[row][col];
         System.out.println(" Nhap gia tri cho tung phan tu: ");
-        for (int i = 0; i < m; i++)
-            for (int j = 0; j < n; j++) {
-                System.out.print(" a [" + i + "][" + j + "]=  ");
+        for (int i = 0; i < row; i++)
+            for (int j = 0; j < col; j++) {
+                System.out.print(" arr [" + i + "][" + j + "]=  ");
                 arr[i][j] = input.nextInt();
             }
-
-        // Xuất ra mảng hai chiều vừa tạo
         System.out.println("Mang 2 chieu vua tao la: ");
-        for (int i = 0; i < m; i++) {
-            for (int j = 0; j < n; j++) {
+        for (int i = 0; i < row; i++) {
+            for (int j = 0; j < col; j++) {
                 System.out.print(arr[i][j] + " ");
             }
             System.out.println();
         }
-        //tính tổng ở cột.
-        int sum = 0;
         System.out.print(" Nhap cot can tinh tong: ");
         int inputCot = input.nextInt();
-        for (int i =0; i < m; i++){
-            for (int j = 0; j < n; j++){
-                if (j == inputCot){
-                    sum +=arr[i][j];
+        int sum = 0;
+        for (int i = 0; i < row; i++) {
+            for (int j = 0; j < col; j++) {
+                if (j == inputCot) {
+                    sum += arr[i][j];
                 }
             }
         }
-        System.out.print("Tong cac gia tri o cot: "+ inputCot + " la: "+ sum);
+        return sum;
     }
 }

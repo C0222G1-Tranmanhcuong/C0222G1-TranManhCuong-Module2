@@ -111,37 +111,39 @@ public class ReadNumbersIntoLetters {
             }
             switch (hundred) {
                 case 1:
-                    display3 = " One hundred and ";
+                    display3 = " One hundred ";
                     break;
                 case 2:
-                    display3 = " Two hundred and ";
+                    display3 = " Two hundred ";
                     break;
                 case 3:
-                    display3 = " Three hundred and ";
+                    display3 = " Three hundred ";
                     break;
                 case 4:
-                    display3 = " Four hundred and ";
+                    display3 = " Four hundred ";
                     break;
                 case 5:
-                    display3 = " Five hundred and ";
+                    display3 = " Five hundred ";
                     break;
                 case 6:
-                    display3 = " Six hundred and ";
+                    display3 = " Six hundred  ";
                     break;
                 case 7:
-                    display3 = " Seven hundred and ";
+                    display3 = " Seven hundred ";
                     break;
                 case 8:
-                    display3 = " Eight hundred and ";
+                    display3 = " Eight hundred ";
                     break;
                 case 9:
-                    display3 = " Nine hundred and ";
+                    display3 = " Nine hundred ";
                     break;
             }
             if (dozens == 1) {
                 System.out.print(" Bạn vừa nhập số: " + input + "=" + display3 + " " + display2);
+            } else if (dozens == 0) {
+                System.out.print(" Bạn vừa nhập số: " + display3);
             } else {
-                System.out.print("Bạn vừa nhập số: " + input + "=" + display3 + display2 + display1);
+                System.out.print("Bạn vừa nhập số: " + input + "=" + display3 + " and " + display2 + display1);
 
 
             }

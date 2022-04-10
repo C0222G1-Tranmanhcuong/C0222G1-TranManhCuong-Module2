@@ -10,28 +10,33 @@ public class SumNumbersDiagonalSquareMatrix {
         m = input.nextInt();
         System.out.print("Nhap so cot n: ");
         n = input.nextInt();
-        int arr[][] = new int[m][n];
+        System.out.print("Tong cac gia tri o duong cheo chinh trong ma tran vuong la: "+ sumNumber(m,n));
+    }
+
+    public static int sumNumber(int row, int col) {
+        Scanner input = new Scanner(System.in);
+        int arr[][] = new int[row][col];
         System.out.println(" Nhap gia tri cho tung phan tu: ");
-        for (int i = 0; i < m; i++)
-            for (int j = 0; j < n; j++) {
-                System.out.print(" a [" + i + "][" + j + "]=  ");
+        for (int i = 0; i < row; i++)
+            for (int j = 0; j < col; j++) {
+                System.out.print(" arr [" + i + "][" + j + "]=  ");
                 arr[i][j] = input.nextInt();
             }
         System.out.println("Mang 2 chieu vua tao la: ");
-        for (int i = 0; i < m; i++) {
-            for (int j = 0; j < n; j++) {
+        for (int i = 0; i < row; i++) {
+            for (int j = 0; j < col; j++) {
                 System.out.print(arr[i][j] + " ");
             }
             System.out.println();
         }
         int sum = 0;
-        for (int i = 0; i < m; i++) {
-            for (int j = 0; j < n; j++) {
+        for (int i = 0; i < row; i++) {
+            for (int j = 0; j < col; j++) {
                 if (i == j) {
                     sum += arr[i][j];
                 }
             }
         }
-        System.out.print("Tong cac so o duong cheo chinh cua ma tran vuong la: " + sum);
+        return sum;
     }
 }

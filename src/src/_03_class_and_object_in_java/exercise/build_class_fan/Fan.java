@@ -1,17 +1,18 @@
 package _03_class_and_object_in_java.exercise.build_class_fan;
 
 public class Fan {
-    final int SLOW =1;
-    final int MEDIUM =2;
-    final int FAST =3;
+    final int SLOW = 1;
+    final int MEDIUM = 2;
+    final int FAST = 3;
     private boolean on;
     private double radius;
     private int speed;
     private String color;
 
-    public Fan(){
+    public Fan() {
 
     }
+
     public int getSLOW() {
         return SLOW;
     }
@@ -55,13 +56,15 @@ public class Fan {
     public void setColor(String color) {
         this.color = color;
     }
-    public void Fan(){
+
+    public void Fan() {
         this.speed = SLOW;
         this.radius = 5;
         this.color = "Blue";
         this.on = false;
     }
-    public void Fan(int speed, double radius,String color,boolean on){
+
+    public void Fan(int speed, double radius, String color, boolean on) {
 
         this.speed = speed;
         this.radius = radius;
@@ -71,10 +74,10 @@ public class Fan {
 
     @Override
     public String toString() {
-        if(this.on = true){
-            return (" Speed "+ speed + " Radius " + radius + " Color " + color + " Fan is on ");
+        if (this.on = true) {
+            return (" Speed " + speed + " Radius " + radius + " Color " + color + " Fan is on ");
         } else {
-            return ("Color "+ color + "Radius "+ radius + " Fan is off");
+            return ("Color " + color + "Radius " + radius + " Fan is off");
         }
     }
 }
