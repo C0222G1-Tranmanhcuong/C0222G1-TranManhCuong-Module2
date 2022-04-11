@@ -1,6 +1,6 @@
-package _06_abstract_class_and_interface.exercise.inplement_interface_resizeble;
+package _06_abstract_class_and_interface.exercise.inplement_interface_resizeable;
 
-public abstract class Shape implements Resizeble {
+public abstract class Shape implements Resizeable {
     private String color = "red";
     private boolean filled = false;
 
