@@ -1,4 +1,0 @@
-package _10_java_collection_framework.exercise.practice_using_arraylist_linkedlist_in_java_collection_framework;
-
-public class Product {
-}
