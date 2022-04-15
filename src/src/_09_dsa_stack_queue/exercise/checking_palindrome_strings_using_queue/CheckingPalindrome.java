@@ -1,28 +1,30 @@
 package _09_dsa_stack_queue.exercise.checking_palindrome_strings_using_queue;
 
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.Scanner;
-import java.util.Stack;
+import java.util.*;
 
 public class CheckingPalindrome {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.println("Nhập chuỗi muốn kiểm tra: ");
         String str = input.nextLine();
-        String[] array;
-        array = str.split("");
         Stack<String> stack = new Stack<>();
         Queue<String> queue = new LinkedList<>();
-        for (int i = 0, j = str.length() - 1; i < str.length(); i++, j--) {
-            stack.push(array[i].toLowerCase());
-            queue.add(array[j].toLowerCase());
+        str = str.toLowerCase().replaceAll(" ", "");
+        String[] arrStr = str.split("");
+        System.out.println(Arrays.toString(arrStr));
+        for (int i = 0; i < arrStr.length; i++) {
+            queue.add(arrStr[i]);
+            stack.push(arrStr[i]);
         }
-        if (stack.equals(queue)) {
-            System.out.println("Đây là chuỗi Palindrome");
-        } else {
-            System.out.println("Đây không phải là chuỗi Palindrome");
+        String result = "";
+        while (!queue.isEmpty()) {
+            if (queue.remove().equals(stack.pop())) {
+                result = "Đaay là chuỗi palindrome";
+            } else {
+                result = "Đây không phải là chuỗi palindrome";
+                break;
+            }
         }
-
+        System.out.println(result);
     }
 }
