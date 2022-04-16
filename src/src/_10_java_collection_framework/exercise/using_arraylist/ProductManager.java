@@ -2,6 +2,7 @@ package _10_java_collection_framework.exercise.using_arraylist;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.Scanner;
 
 public class ProductManager {
@@ -23,7 +24,7 @@ public class ProductManager {
         Product product = new Product(productID, productName, productPrice);
         products.add(product);
         System.out.println("Đã thêm sản phẩm thành công!");
-        System.out.println(products);
+        displayProduct(products);
 
     }
 
@@ -36,7 +37,7 @@ public class ProductManager {
         for (Product item : products) {
             if (item.getproductId().equals(productID)) {
                 products.remove(item);
-                System.out.println(products.toString());
+                displayProduct(products);
                 check = true;
                 break;
 
@@ -66,7 +67,7 @@ public class ProductManager {
         for (Product item : products) {
             if (item.getProductName().equals(productName)) {
                 System.out.println("Sản phẩm cần tìm là: ");
-                System.out.println(item.toString());
+                displayProduct(products);
                 check = true;
                 break;
             } else {
@@ -92,7 +93,7 @@ public class ProductManager {
                 item.setProductName(input.nextLine());
                 System.out.println("Nhập giá sản phẩm mới: ");
                 item.setProductPrice(Integer.parseInt(input.nextLine()));
-                System.out.println(products);
+                displayProduct(products);
                 check = true;
                 break;
             } else {
@@ -104,16 +105,23 @@ public class ProductManager {
         }
     }
 
-    public static void sortAscending(ArrayList<Product> products) {
-        AscendingProduct ascendingProduct = new AscendingProduct();
-        Collections.sort(products, ascendingProduct);
-
+    public static void sortIncrease(ArrayList<Product> products) {
+        Collections.sort(products, new Comparator<Product>() {
+            @Override
+            public int compare(Product o1, Product o2) {
+                return o1.getProductPrice() - o2.getProductPrice();
+            }
+        });
+        displayProduct(products);
     }
 
-    public static void sortDescending(ArrayList<Product> products) {
-        DescendingProduct descendingProduct = new DescendingProduct();
-        Collections.sort(products, descendingProduct);
-
-
+    public static void sortDecrease(ArrayList<Product> products) {
+        Collections.sort(products, new Comparator<Product>() {
+            @Override
+            public int compare(Product o1, Product o2) {
+                return o2.getProductPrice() - o1.getProductPrice();
+            }
+        });
+        displayProduct(products);
     }
 }
