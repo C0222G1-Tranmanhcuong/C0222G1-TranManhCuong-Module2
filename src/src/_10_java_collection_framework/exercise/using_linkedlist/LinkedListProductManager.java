@@ -1,5 +1,6 @@
 package _10_java_collection_framework.exercise.using_linkedlist;
 
+import java.util.Collections;
 import java.util.LinkedList;
 import java.util.Scanner;
 
@@ -95,4 +96,5 @@ public class LinkedListProductManager {
             System.out.println("Nhập sai");
         }
     }
+
 }

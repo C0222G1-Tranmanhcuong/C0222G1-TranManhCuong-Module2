@@ -13,21 +13,21 @@ public class MainTest {
 
         Collections.sort(human);
 
-        Queue<HumanManagement> Nam = new LinkedList<>();
-        Queue<HumanManagement> Nu = new LinkedList<>();
+        Queue<HumanManagement> nam = new LinkedList<>();
+        Queue<HumanManagement> nu = new LinkedList<>();
         for (int i = 0; i < human.size(); i++) {
             if (human.get(i).isGender()) {
-                Nam.add(human.get(i));
+                nam.add(human.get(i));
             } else {
-                Nu.add(human.get(i));
+                nu.add(human.get(i));
             }
         }
 
         for (int i = 0; i < human.size(); i++) {
-            if (!Nu.isEmpty()) {
-                human.set(i, Nu.poll());
+            if (!nu.isEmpty()) {
+                human.set(i, nu.poll());
             } else {
-                human.set(i, Nam.poll());
+                human.set(i, nam.poll());
             }
         }
         System.out.println(human);

@@ -1,4 +1,4 @@
-package _07_cleancode_and_refactoring.practice.refactoring_method;
+package _07_cleancode_and_refactoring.practice.refactoring_var;
 
 public class FizzBuzz {
     public static String fizzBuzz(int number){

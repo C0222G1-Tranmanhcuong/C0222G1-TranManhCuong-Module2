@@ -1,12 +1,9 @@
 package _10_java_collection_framework.exercise.using_arraylist;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.Scanner;
+import java.util.*;
 
 public class ProductManager {
-    public static void addProduct(ArrayList<Product> products) {
+    public static void addProduct(List<Product>products) {
 
         Scanner input = new Scanner(System.in);
         System.out.println("Nhập ID sản phẩm muốn thêm: ");
@@ -28,7 +25,7 @@ public class ProductManager {
 
     }
 
-    public static void removeProduct(ArrayList<Product> products) {
+    public static void removeProduct(List<Product> products) {
         Scanner input = new Scanner(System.in);
 
         System.out.println("Nhập ID sản phẩm cần xoá: ");
@@ -41,8 +38,6 @@ public class ProductManager {
                 check = true;
                 break;
 
-            } else {
-                check = false;
             }
         }
         if (!check) {
@@ -50,7 +45,7 @@ public class ProductManager {
         }
     }
 
-    public static void displayProduct(ArrayList<Product> products) {
+    public static void displayProduct(List<Product> products) {
 
         for (Product item : products) {
             System.out.println(item.toString());
@@ -58,7 +53,8 @@ public class ProductManager {
         }
     }
 
-    public static void findProduct(ArrayList<Product> products) {
+
+    public static void findProduct(List<Product> products) {
         Scanner input = new Scanner(System.in);
 
         System.out.println(" Nhập tên sản phẩm cần tìm kiếm: ");
@@ -70,8 +66,6 @@ public class ProductManager {
                 displayProduct(products);
                 check = true;
                 break;
-            } else {
-                check = false;
             }
 
         }
@@ -80,7 +74,9 @@ public class ProductManager {
         }
     }
 
-    public static void fixProduct(ArrayList<Product> products) {
+
+
+    public static void fixProduct(List<Product> products) {
         Scanner input = new Scanner(System.in);
         System.out.println("Nhập ID sản phẩm muốn sửa: ");
         String id = input.nextLine();
@@ -96,8 +92,6 @@ public class ProductManager {
                 displayProduct(products);
                 check = true;
                 break;
-            } else {
-                check = false;
             }
         }
         if (!check) {
@@ -105,7 +99,7 @@ public class ProductManager {
         }
     }
 
-    public static void sortIncrease(ArrayList<Product> products) {
+    public static void sortIncrease(List<Product> products) {
         Collections.sort(products, new Comparator<Product>() {
             @Override
             public int compare(Product o1, Product o2) {
@@ -115,7 +109,7 @@ public class ProductManager {
         displayProduct(products);
     }
 
-    public static void sortDecrease(ArrayList<Product> products) {
+    public static void sortDecrease(List<Product> products) {
         Collections.sort(products, new Comparator<Product>() {
             @Override
             public int compare(Product o1, Product o2) {

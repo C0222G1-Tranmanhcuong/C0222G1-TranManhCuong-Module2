@@ -33,6 +33,7 @@ public class TestProduct {
                     ProductManager.removeProduct(products);
                     break;
                 case 3:
+
                     ProductManager.findProduct(products);
                     break;
                 case 4:

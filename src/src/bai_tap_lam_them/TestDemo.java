@@ -22,12 +22,12 @@ public class TestDemo {
         arr[3] = teacher1;
 
         while (true) {
-            System.out.println("1. Hien thi danh sach ");
-            System.out.println("2.Them moi hoc sinh: ");
-            System.out.println("3. Them moi giao vien: ");
-            System.out.println("4. Xoa hoc sinh trong danh sach ");
-            System.out.println("5. Xoa giao vien trong danh sach ");
-            System.out.println("0. Exit");
+            System.out.println("1. Hiển thị danh sách ");
+            System.out.println("2.Thêm mới học viên: ");
+            System.out.println("3. Thêm mới giáo viên: ");
+            System.out.println("4. Xoá học viên trong dang sách ");
+            System.out.println("5. Xoá giáo viên trong danh sách ");
+            System.out.println("0. Exit ");
             int choose = Integer.parseInt(sc.nextLine());
             switch (choose) {
                 case 1:
@@ -54,9 +54,9 @@ public class TestDemo {
     public static void display() {
         boolean check = true;
         while (check) {
-            System.out.println("1. Hien thi danh sach giao vien ");
-            System.out.println("2. Hien thi danh sach hoc sinh");
-            System.out.println("0. Tro lai ");
+            System.out.println("1. Hiển thị danh sách giáo viên ");
+            System.out.println("2. Hiển thị danh sách học viên ");
+            System.out.println("0. Trở lại! ");
             switch (Integer.parseInt(sc.nextLine())) {
                 case 1:
                     choosedisplay(true);
@@ -68,11 +68,9 @@ public class TestDemo {
                     check = false;
                     break;
                 default:
-                    System.out.println("Loi, xin nhap lai");
+                    System.out.println("Lỗi, xin nhập lại! ");
             }
         }
-
-
     }
 
     public static void choosedisplay(boolean choose) {
@@ -96,9 +94,9 @@ public class TestDemo {
     }
 
     public static void addStudent() {
-        System.out.println(" Nhập tên: ");
+        System.out.println(" Nhập tên học viên: ");
         String name = sc.nextLine();
-        System.out.println("Nhập tuổi");
+        System.out.println("Nhập tuổi học viên: ");
         int age = Integer.parseInt(sc.nextLine());
         System.out.println("Nhập 1:Nam    2:Nữ ");
         boolean gender = false;
@@ -136,9 +134,9 @@ public class TestDemo {
     }
 
     public static void addTeacher() {
-        System.out.println(" Nhập tên : ");
+        System.out.println(" Nhập tên giáo viên : ");
         String name = sc.nextLine();
-        System.out.println("Nhập tuổi");
+        System.out.println("Nhập tuổi giáo viên: ");
         int age = Integer.parseInt(sc.nextLine());
         System.out.println("Nhập 1:Nam    2:Nữ ");
         boolean gender = false;
@@ -159,7 +157,7 @@ public class TestDemo {
     }
 
     public static void deleteTeacher() {
-        System.out.println("Nhập tên cần xóa");
+        System.out.println("Nhập tên giáo viên cần xóa");
         String name = sc.nextLine();
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] != null) {

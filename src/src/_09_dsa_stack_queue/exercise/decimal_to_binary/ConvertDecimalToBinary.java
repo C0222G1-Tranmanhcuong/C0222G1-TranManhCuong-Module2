@@ -1,4 +1,4 @@
-package _09_dsa_stack_queue.exercise.DecimalToBinary;
+package _09_dsa_stack_queue.exercise.decimal_to_binary;
 
 import java.util.Scanner;
 import java.util.Stack;
