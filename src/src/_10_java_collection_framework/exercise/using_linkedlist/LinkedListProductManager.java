@@ -43,8 +43,6 @@ public class LinkedListProductManager {
                 item.setPrice(Double.parseDouble(sc.nextLine()));
                 check = true;
                 break;
-            } else {
-                check = false;
             }
         }
         if (!check) {
@@ -63,13 +61,11 @@ public class LinkedListProductManager {
         String findName = sc.nextLine().toLowerCase();
         boolean check = false;
         for (Product item : myLinkedList) {
-            if (item.getName().toLowerCase().equals(findName)) {
+            if (item.getName().toLowerCase().contains(findName)) {
                 System.out.println("Sản phẩm cần tìm:");
                 System.out.println(item.toString());
                 check = true;
                 break;
-            } else {
-                check = false;
             }
         }
         if (!check) {
@@ -88,9 +84,7 @@ public class LinkedListProductManager {
                 displayProductList();
                 check = true;
                 break;
-            } else {
-                check = false;
-            }
+            } 
         }
         if (!check) {
             System.out.println("Nhập sai");

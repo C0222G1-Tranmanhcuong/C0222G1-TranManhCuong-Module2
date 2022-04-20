@@ -3,7 +3,7 @@ package _10_java_collection_framework.exercise.using_arraylist;
 import java.util.*;
 
 public class ProductManager {
-    public static void addProduct(List<Product>products) {
+    public static void addProduct(List<Product> products) {
 
         Scanner input = new Scanner(System.in);
         System.out.println("Nhập ID sản phẩm muốn thêm: ");
@@ -61,9 +61,8 @@ public class ProductManager {
         String productName = input.nextLine();
         boolean check = false;
         for (Product item : products) {
-            if (item.getProductName().equals(productName)) {
-                System.out.println("Sản phẩm cần tìm là: ");
-                displayProduct(products);
+            if (item.getProductName().contains(productName)) {
+                System.out.println("Sản phẩm cần tìm là: " + item);
                 check = true;
                 break;
             }
@@ -73,7 +72,6 @@ public class ProductManager {
             System.out.println(" Không có sản phẩm");
         }
     }
-
 
 
     public static void fixProduct(List<Product> products) {
