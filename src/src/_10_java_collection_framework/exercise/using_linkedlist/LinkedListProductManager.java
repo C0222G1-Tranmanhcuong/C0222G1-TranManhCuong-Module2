@@ -84,7 +84,7 @@ public class LinkedListProductManager {
                 displayProductList();
                 check = true;
                 break;
-            } 
+            }
         }
         if (!check) {
             System.out.println("Nhập sai");
