@@ -19,11 +19,9 @@ public class ReadAndWrite {
                 listStr.add(arrStr);
             }
             return listStr;
-        }catch (FileNotFoundException e){
+        } catch (IOException e){
             e.printStackTrace();
-        }catch (IOException e){
-            e.printStackTrace();
-        }finally {
+        } finally {
             bufferedReader.close();
             fileReader.close();
         }

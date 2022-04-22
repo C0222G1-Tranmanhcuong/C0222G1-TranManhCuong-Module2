@@ -5,20 +5,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
+        List<String[]> list = ReadAndWrite.readFile("src\\_14_io_text_file\\exercise\\" +
+                "read_file_csv\\countryList.csv");
+
         List<Country> listCountry = new ArrayList<>();
-        ReadAndWrite readAndWrite = new ReadAndWrite();
-        try {
-            List<String[]> list = readAndWrite.readFile("src\\_14_io_text_file\\exercise\\read_file_csv\\countList.csv");
+        Country country;
+        for (String[] item : list) {
+            country = new Country(Integer.parseInt(item[0]), item[1], item[2]);
+            listCountry.add(country);
 
-            for (String[] item : list) {
-                Country country = new Country(Integer.parseInt(item[0]), item[1], item[2]);
-                listCountry.add(country);
-
-            }
-
-        } catch (IOException e) {
-            e.printStackTrace();
         }
         for (Country item : listCountry) {
             System.out.println(item);
