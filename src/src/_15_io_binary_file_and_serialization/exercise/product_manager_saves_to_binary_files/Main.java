@@ -1,16 +1,19 @@
 package _15_io_binary_file_and_serialization.exercise.product_manager_saves_to_binary_files;
 
+import _14_io_text_file.exercise.read_file_csv.ReadAndWrite;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
 public class Main {
+    private static final String PRODUCT = "src\\_15_io_binary_file_and_serialization\\exercise\\product_manager_saves_to_binary_files\\productManager.txt";
     private static List<Product> productList = new ArrayList<>();
     private static Scanner input = new Scanner(System.in);
     private static ReadAndWriteFileProduct readAndWrite = new ReadAndWriteFileProduct();
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
 
         productList.add(new Product(1, "Hyundai Accent", "Hyundai", 5000));
@@ -48,8 +51,8 @@ public class Main {
     public static void displayProduct() {
 
         try {
-            productList = readAndWrite.readFileBinary("src\\_15_io_binary_file_and_serialization\\exercise\\" +
-                    "product_manager_saves_to_binary_files\\productManager.txt");
+            productList = readAndWrite.readFileBinary(PRODUCT
+            );
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -59,7 +62,8 @@ public class Main {
         }
     }
 
-    public static void addProduct() {
+    public static void addProduct() throws IOException {
+        productList = readAndWrite.readFileBinary(PRODUCT);
         Scanner input = new Scanner(System.in);
         System.out.println("Nhập mã sản phẩm muốn thêm: ");
         int productCode = Integer.parseInt(input.nextLine());
@@ -72,8 +76,7 @@ public class Main {
         Product product = new Product(productCode, productName, manufacturer, productPrice);
         productList.add(product);
         try {
-            readAndWrite.writerFileBinary("src\\_15_io_binary_file_and_serialization\\exercise\\" +
-                    "product_manager_saves_to_binary_files\\productManager.txt", productList);
+            readAndWrite.writerFileBinary(PRODUCT, productList);
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -83,7 +86,8 @@ public class Main {
 
     }
 
-    public static void findByName() {
+    public static void findByName() throws IOException {
+        productList = readAndWrite.readFileBinary(PRODUCT);
         System.out.println(" Nhập tên sản phẩm cần tìm kiếm: ");
         String productName = input.nextLine();
         boolean check = false;
