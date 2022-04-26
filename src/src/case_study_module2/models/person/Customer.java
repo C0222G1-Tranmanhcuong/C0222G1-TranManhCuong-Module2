@@ -1,6 +1,6 @@
-package case_study_module2.models;
+package case_study_module2.models.person;
 
-public class Customer extends  Person{
+public class Customer extends Person {
     private int customerId;
     private String gender;
     private int phoneNumber;
@@ -11,7 +11,7 @@ public class Customer extends  Person{
     }
 
     public Customer(int id,
-                    String name, int age, String address,
+                    String name, String age, String address,
                     int customerId, String gender, int phoneNumber,
                     String email, String customerLevel) {
         super(id, name, age, address);
@@ -73,4 +73,5 @@ public class Customer extends  Person{
                 ", email: " + email +
                 ", customerLevel: " + customerLevel ;
     }
+
 }

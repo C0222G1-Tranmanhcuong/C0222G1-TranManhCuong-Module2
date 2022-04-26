@@ -1,12 +1,12 @@
 package case_study_module2.service;
 
 public interface Service {
-    public  void dislay();
+    public  void display();
 
-    void addNew();
+    public void addNew();
 
-    void edit();
+    public void edit();
 
-    void delete();
+    public void delete();
 
 }

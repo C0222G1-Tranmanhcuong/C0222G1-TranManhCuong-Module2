@@ -1,9 +1,9 @@
-package case_study_module2.models;
+package case_study_module2.models.person;
 
 public class Employee extends Person {
     private int employeeId;
     private String gender;
-    private int phoneNumber;
+    private long phoneNumber;
     private String email;
     private String level;
     private String position;
@@ -14,9 +14,9 @@ public class Employee extends Person {
     }
 
     public Employee(int id, String name,
-                    int age, String address,
+                    String age, String address,
                     int employeeId, String gender,
-                    int phoneNumber, String email,
+                    long phoneNumber, String email,
                     String level, String position,
                     double salary) {
         super(id, name, age, address);
@@ -45,7 +45,7 @@ public class Employee extends Person {
         this.gender = gender;
     }
 
-    public int getPhoneNumber() {
+    public long getPhoneNumber() {
         return phoneNumber;
     }
 
@@ -88,14 +88,14 @@ public class Employee extends Person {
     @Override
     public String toString() {
         return "Employee: " +
-                " id: "+ super.getId()+ ", name: " + super.getName()+
-                ", age: " + super.getAge()+ ", address: " + super.getAddress()+
-                "employeeId=" + employeeId +
-                ", gender='" + gender +
-                ", phoneNumber=" + phoneNumber +
-                ", email='" + email +
-                ", level='" + level +
-                ", position='" + position +
-                ", salary=" + salary ;
+                " id: " + super.getId() + ", name: " + super.getName() +
+                ", age: " + super.getAge() + ", address: " + super.getAddress() +
+                ", employeeId: " + employeeId +
+                ", gender: " + gender +
+                ", phoneNumber: " + phoneNumber +
+                ", email: " + email +
+                ", level: " + level +
+                ", position: " + position +
+                ", salary: " + salary;
     }
 }

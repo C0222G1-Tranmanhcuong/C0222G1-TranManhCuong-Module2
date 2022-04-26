@@ -1,15 +1,15 @@
-package case_study_module2.models;
+package case_study_module2.models.person;
 
 public abstract class  Person {
     private  int id;
     private  String name;
-    private int age;
+    private String age;
     private String address;
 
     public Person() {
     }
 
-    public Person(int id, String name, int age, String address) {
+    public Person(int id, String name, String age, String address) {
         this.id = id;
         this.name = name;
         this.age = age;
@@ -32,11 +32,11 @@ public abstract class  Person {
         this.name = name;
     }
 
-    public int getAge() {
+    public String getAge() {
         return age;
     }
 
-    public void setAge(int age) {
+    public void setAge(String age) {
         this.age = age;
     }
 
