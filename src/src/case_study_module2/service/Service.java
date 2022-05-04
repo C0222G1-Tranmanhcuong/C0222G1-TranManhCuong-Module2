@@ -1,11 +1,13 @@
 package case_study_module2.service;
 
+import java.io.IOException;
+
 public interface Service {
-    public  void display();
+    public  void display() throws IOException;
 
-    public void addNew();
+    public void addNew() throws IOException;
 
-    public void edit();
+    public void edit() throws IOException;
 
     public void delete();
 

@@ -1,36 +1,34 @@
 package case_study_module2.models.booking_contract;
 
+import case_study_module2.models.facility.Facility;
+import case_study_module2.models.person.Customer;
+
 public class Booking {
-    private String idBooking;
+    private int id;
     private String startDay;
     private String endDay;
-    private String idCustomer;
-    private String nameService;
-    private String typeService;
+    private Customer customer;
+    private Facility facility;
+
 
     public Booking() {
     }
 
-    public Booking(String idBooking,
-                   String startDay,
-                   String endDay,
-                   String idCustomer,
-                   String nameService,
-                   String typeService) {
-        this.idBooking = idBooking;
+    public Booking(int id, String startDay, String endDay, Customer customer, Facility facility) {
+        this.id = id;
         this.startDay = startDay;
         this.endDay = endDay;
-        this.idCustomer = idCustomer;
-        this.nameService = nameService;
-        this.typeService = typeService;
+        this.customer = customer;
+        this.facility = facility;
     }
 
-    public String getIdBooking() {
-        return idBooking;
+
+    public int getId() {
+        return id;
     }
 
-    public void setIdBooking(String idBooking) {
-        this.idBooking = idBooking;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getStartDay() {
@@ -49,38 +47,30 @@ public class Booking {
         this.endDay = endDay;
     }
 
-    public String getIdCustomer() {
-        return idCustomer;
+    public Customer getCustomer() {
+        return customer;
     }
 
-    public void setIdCustomer(String idCustomer) {
-        this.idCustomer = idCustomer;
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
     }
 
-    public String getNameService() {
-        return nameService;
+    public Facility getFacility() {
+        return facility;
     }
 
-    public void setNameService(String nameService) {
-        this.nameService = nameService;
+    public void setFacility(Facility facility) {
+        this.facility = facility;
     }
 
-    public String getTypeService() {
-        return typeService;
-    }
-
-    public void setTypeService(String typeService) {
-        this.typeService = typeService;
-    }
 
     @Override
     public String toString() {
         return "Booking: " +
-                "idBooking: " + idBooking +
-                ", startDay: " + startDay  +
-                ", endDay: " + endDay  +
-                ", idCustomer: " + idCustomer +
-                ", nameService: " + nameService  +
-                ", typeService: " + typeService ;
+                " id=" + id +
+                ", startDay: " + startDay +
+                ", endDay: " + endDay +
+                ", customer: " + customer +
+                ", facility: " + facility ;
     }
 }

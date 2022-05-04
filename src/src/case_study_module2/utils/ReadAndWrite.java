@@ -9,6 +9,13 @@ public class ReadAndWrite {
         File file = new File(path);
         FileWriter fileWriter = null;
         BufferedWriter bufferedWriter = null;
+        if (!file.exists()){
+            try {
+                file.createNewFile();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
         try {
             fileWriter = new FileWriter(file, true);
             bufferedWriter = new BufferedWriter(fileWriter);
@@ -25,13 +32,6 @@ public class ReadAndWrite {
     public static List<String[]> readList(String path)  {
         List<String[]> myList = new ArrayList<>();
         File file = new File(path);
-        if (!file.exists()){
-            try {
-                file.createNewFile();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
 
         try (FileReader fileReader = new FileReader(file);
              BufferedReader bufferedReader = new BufferedReader(fileReader)) {
